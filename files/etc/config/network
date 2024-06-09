@@ -1,0 +1,25 @@
+config interface 'loopback'
+        option device 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config globals 'globals'
+        option ula_prefix 'fdb2:2708:4969::/48'
+
+config device
+        option name 'br-lan'
+        option type 'bridge'
+        list ports 'eth0'
+
+config interface 'lan'
+        option device 'br-lan'
+        option proto 'dhcp'
+        option ip6assign '60'
+
+config interface 'wwan'
+        option proto 'dhcp'
+        option hostname 'NVR_WAN_000322C32058'
+        option device 'apcli0'
+
+

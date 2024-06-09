@@ -1,0 +1,7 @@
+#!/bin/sh
+# Setup scipt
+rm /etc/rc.local
+echo "iw phy phy0 interface add mon0 type monitor" >> /etc/rc.local
+echo "ifconfig mon0 up" >> /etc/rc.local
+echo "/usr/bin/o2-pro-init" >> /etc/rc.local
+echo "exit 0" >> /etc/rc.local
