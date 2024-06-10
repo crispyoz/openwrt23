@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Place this file in /etc/hotplug.d/iface/60-ifup
 #set -x
@@ -51,24 +51,14 @@ set_inittab()
     fi 
 }
 
-
 echo  "Starting interface hotplug Device: ${DEVICE} Action: ${ACTION} Interface: ${INTERFACE}" >> $log_file
 if [ "$ACTION" = "ifup" -a "$INTERFACE" = "$WIFI_INTERFACE" ]; then
-    uci set tnscan.@snoop[0].run_count='0'
-    uci set tnscan.@scan[0].run_count='0'
-    uci set tnscan.@ports[0].run_count='0'
-    uci commit tnscan
-
-    echo "Starting log.." > $log_file
-	
 	set_inittab $DEVICE
 fi
 
 
 if [ "$ACTION" = "ifup" -a "$INTERFACE" = "$ETH_INTERFACE" ]; then
-
 	set_inittab $DEVICE
-
 fi
 
 

@@ -12,7 +12,7 @@
 /tmp
 /logs
 /feeds
-/feeds.conf
+#/feeds.conf
 #/files
 /target/linux/feeds
 /overlay

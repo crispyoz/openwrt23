@@ -2,6 +2,7 @@
 #
 # 
 # Place this file in /etc/hotplug.d/net/01-fixmac 
+#    requires bc package
 #
 
 m4=$(cat /sys/class/net/eth0/address | awk -F':' '{ print $4 }')
