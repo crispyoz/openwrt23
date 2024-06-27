@@ -1,5 +1,0 @@
-chain accept_from_wan {
-        type filter hook input priority 0; policy accept;
-        tcp dport ssh accept
-}
-

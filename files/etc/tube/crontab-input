@@ -1,6 +1,0 @@
-#*/10 * * * * sh /etc/tube/scripts/run_script.sh snoop >/dev/null 2>&1
-#*/2  * * * * sh /etc/tube/scripts/run_script.sh scan >/dev/null 2>&1
-*  */2 * * *  sh /etc/tube/scripts/run_script.sh ports >/dev/null 2>&1
-50  *  * * *  sh /etc/tube/scripts/run_script.sh snoop >/dev/null 2>&1
-*/10  *  * * *  sh /etc/tube/scripts/run_script.sh wifi >/dev/null 2>&1
-

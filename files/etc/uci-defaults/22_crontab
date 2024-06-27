@@ -1,6 +1,0 @@
-#!/bin/sh
-crontab /etc/tube/crontab-input
-rm /etc/tube/crontab-input
-service cron enable
-service tube enable
-
